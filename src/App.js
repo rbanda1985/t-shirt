@@ -7,12 +7,15 @@ import items from "./items/items";
 
 function App() {
   const [cartItems, setCartItems] = useState(items);
-  console.log(items);
   return (
     <div className="app">
       <Header title="T-Shirt-Store" />
       <div className="app-main">
-        <CartItems heading="Shopping Cart" items={cartItems} />
+        <CartItems
+          heading="Shopping Cart"
+          items={cartItems}
+          setCartItems={setCartItems}
+        />
         <CartTotal items={cartItems} />
       </div>
     </div>

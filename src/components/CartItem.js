@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "../css/CartItem.css";
 
-const CartItem = ({ item }) => {
-  let initialQuantity = item.quantity;
-  const [quantity, setQuantity] = useState(initialQuantity);
+const CartItem = ({ item, changeItemQuantity, index }) => {
   return (
     <div className="CartItem-container">
       <div className="cartItem-image">
@@ -17,12 +15,15 @@ const CartItem = ({ item }) => {
         <div className="cart-item-selection">
           <div className="cartItem-quantity">
             <select
-              value={quantity}
-              onChange={e => setQuantity({ quantity: e.target.value })}
+              value={item.quantity}
+              onChange={e => changeItemQuantity(e, index)}
             >
-              <option value={quantity}>Qty: 1</option>
-              <option value={quantity}>Qty: 2</option>
-              <option value={quantity}>Qty: 3</option>
+              <option value="1">Qty: 1</option>
+              <option value="2">Qty: 2</option>
+              <option value="3">Qty: 3</option>
+              <option value="4">Qty: 4</option>
+              <option value="5">Qty: 5</option>
+              <option value="6">Qty: 6</option>
             </select>
           </div>
           <p>|</p>
