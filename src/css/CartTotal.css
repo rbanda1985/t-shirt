@@ -1,0 +1,6 @@
+.cart-total-container {
+  flex: 0.3 1;
+  background-color: #123c69;
+  padding: 20px;
+  color: white;
+}
