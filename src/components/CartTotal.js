@@ -12,8 +12,8 @@ const CartTotal = ({ items }) => {
   };
   return (
     <div className="cart-total-container">
+      <h2>Sub Total</h2>
       <div className="cart-total-header">
-        <h2>Sub Total</h2>
         <span className="cartTotal-price">
           <NumberFormat
             value={getTotalPrice()}

@@ -3,4 +3,28 @@
   background-color: #123c69;
   padding: 20px;
   color: white;
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.cart-total-header {
+  padding-bottom: 12px;
+}
+
+.cartTotal-price {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.cart-total-checkout {
+  padding-top: 18px;
+}
+
+.cart-total-checkout button {
+  font-size: 16px;
+  border-radius: 4px;
 }
