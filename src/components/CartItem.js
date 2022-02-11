@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/CartItem.css";
 
-const CartItem = ({ item, changeItemQuantity, index }) => {
+const CartItem = ({ item, changeItemQuantity, index, deleteItem }) => {
   return (
     <div className="CartItem-container">
       <div className="cartItem-image">
@@ -27,7 +27,12 @@ const CartItem = ({ item, changeItemQuantity, index }) => {
             </select>
           </div>
           <p>|</p>
-          <div className="cartItem-delete">Delete</div>
+          <div
+            className="cartItem-delete"
+            onClick={deleteItem.bind(this, index)}
+          >
+            Delete
+          </div>
         </div>
       </div>
       <div className="cartItem-price">{item.price}</div>
